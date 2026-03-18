@@ -1,0 +1,153 @@
+name: Bug Report
+description: Report a reproducible bug or unexpected behavior
+title: "[BUG] "
+labels:
+  - bug
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report. Please include as much detail as possible.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A clear and concise description of the bug.
+      placeholder: Briefly describe what happened.
+    validations:
+      required: true
+
+  - type: input
+    id: module_feature
+    attributes:
+      label: Affected Module or Feature
+      placeholder: e.g. Authentication, LDAP sync, API endpoint
+    validations:
+      required: true
+
+  - type: input
+    id: file_path
+    attributes:
+      label: File or Path (optional)
+      placeholder: e.g. src/Nucleo.Ldap.AppHost/AppHost.cs
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context (optional)
+      placeholder: Any extra context that helps understand the issue scope.
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual Behavior
+      description: What happened?
+      placeholder: Describe the observed behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: Describe the expected behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide a minimal, reproducible set of steps.
+      placeholder: |
+        1. Go to "..."
+        2. Run "..."
+        3. Observe "..."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Environment
+
+  - type: input
+    id: os_platform
+    attributes:
+      label: OS / Platform
+      placeholder: e.g. Ubuntu 24.04, Windows 11, macOS 15
+    validations:
+      required: true
+
+  - type: input
+    id: version_commit
+    attributes:
+      label: Version / Commit SHA
+      placeholder: e.g. v1.2.3 or a1b2c3d
+    validations:
+      required: true
+
+  - type: input
+    id: runtime_framework
+    attributes:
+      label: Runtime / Framework
+      placeholder: e.g. .NET 10.0, Node.js 20.x, Python 3.12
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser (if applicable)
+      placeholder: e.g. Chrome 123, Firefox 124
+
+  - type: input
+    id: device_host_type
+    attributes:
+      label: Device / Host Type
+      placeholder: e.g. Desktop, VM, Server
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical - Data loss, security vulnerability, or service outage
+        - High - Major feature impacted with no practical workaround
+        - Medium - Feature impacted with a workaround available
+        - Low - Minor issue, cosmetic issue, or edge case
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs_error_output
+    attributes:
+      label: Logs and Error Output
+      description: Paste relevant logs, stack traces, or error messages.
+      render: text
+
+  - type: textarea
+    id: screenshots_recording
+    attributes:
+      label: Screenshots / Recording (optional)
+      description: Add screenshots or a short recording if relevant.
+
+  - type: textarea
+    id: possible_cause_workaround
+    attributes:
+      label: Possible Cause / Workaround (optional)
+      description: Share a suspected cause or temporary workaround.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and confirmed this is not a duplicate
+          required: true
+        - label: I provided minimal reproducible steps
+          required: true
+        - label: I included relevant environment details
+          required: true
+        - label: I can help validate a fix
