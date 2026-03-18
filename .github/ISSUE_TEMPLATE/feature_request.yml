@@ -1,0 +1,128 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "[FEATURE] "
+labels:
+  - enhancement
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing an improvement. Please be as specific as possible.
+
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve?
+      placeholder: |
+        I am blocked when...
+        It is currently impossible to...
+    validations:
+      required: true
+
+  - type: input
+    id: module_feature
+    attributes:
+      label: Scope - Module or Feature
+      placeholder: e.g. Provisioning workflow, API endpoint, dashboard page
+    validations:
+      required: true
+
+  - type: input
+    id: file_path
+    attributes:
+      label: File or Path (optional)
+      placeholder: e.g. src/Nucleo.Ldap.AppHost/AppHost.cs
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context (optional)
+      placeholder: Any extra context for this repository.
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the expected behavior of the new feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define clear, testable criteria for completion.
+      placeholder: |
+        - [ ] Given <context>, when <action>, then <expected outcome>
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives_considered
+    attributes:
+      label: Alternatives Considered
+      description: Which alternatives did you consider, and why are they not sufficient?
+
+  - type: checkboxes
+    id: expected_benefits
+    attributes:
+      label: Expected Benefits
+      options:
+        - label: User Experience improvement (e.g. fewer steps)
+        - label: Performance improvement (e.g. reduced processing time)
+        - label: Developer Experience improvement (e.g. simpler API, less technical debt)
+        - label: Other benefit (describe in additional context)
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User Story
+      description: Provide a user story and typical flow.
+      placeholder: |
+        As a <user type>, I want <goal> so that <business value>.
+
+        Typical flow:
+        1. User goes to "..."
+        2. User triggers "..."
+        3. System does "..." and enables "..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_constraints
+    attributes:
+      label: Technical Constraints / Dependencies (optional)
+      description: Libraries, APIs, migrations, infrastructure constraints, etc.
+
+  - type: textarea
+    id: mockups_examples
+    attributes:
+      label: Mockups / Examples (optional)
+      description: Add mockups, diagrams, screenshots, or links to specs.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High - Blocks a critical workflow
+        - Medium - Important improvement but not blocking
+        - Low - Quality-of-life improvement or niche case
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I confirmed there is no duplicate feature request
+          required: true
+        - label: I described the problem and proposed solution clearly
+          required: true
+        - label: I added clear acceptance criteria
+          required: true
+        - label: I can help refine details during discussion
